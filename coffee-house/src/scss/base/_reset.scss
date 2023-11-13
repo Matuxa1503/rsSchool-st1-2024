@@ -1,5 +1,5 @@
-html{font-size: 20px;scroll-behavior: smooth;}
-body{font-family: 'Inter', sans-serif;line-height: 1;}
+html{font-size: 16px;scroll-behavior: smooth; background-color: #E1D4C9;}
+body{font-family: "Inter", sans-serif;line-height: 1;}
 *{padding: 0; margin: 0; border: 0;}
 *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 input,button,textarea{font-family: inherit;}
@@ -8,3 +8,9 @@ ul li{list-style: none;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;}
 a,a:visited{text-decoration: none;color:inherit}
 p{width: auto}
+
+.wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 40px;
+}

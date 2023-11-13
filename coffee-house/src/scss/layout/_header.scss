@@ -1,0 +1,78 @@
+.header {
+	padding: 20px 0;
+
+&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.nav {
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		@extend %link-button-style;
+		position: relative;
+		margin-right: 40px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 2px;
+			margin-top: 3px;
+			left: 50%;
+			background-color: $text-darkColor;
+			transform: translateX(-50%);
+			transition: all 0.7s ease;
+			opacity: 0;
+		}
+
+		&:hover::after {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+.header__btn-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	@extend %link-button-style;
+
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 2px;
+		margin-top: 32px;
+		left: 50%;
+		background-color: $text-darkColor;
+		transform: translateX(-50%);
+		transition: all 0.7s ease;
+		opacity: 0;
+	}
+
+	&:hover::after {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+.btn__coffee {
+	position: relative;
+	margin-left: 8px;
+	top: -2px;
+}
