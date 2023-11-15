@@ -1,0 +1,108 @@
+.favCoffee {
+	&__title {
+		@extend %heading-2;
+		text-align: center;
+		color: $text-darkColor;
+		margin-bottom: 40px;
+
+		& i {
+			color: $text-accentColor;
+		}
+	}
+
+	&__slider-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+
+	&__btn {
+		background: none;
+		width: 60px;
+		height: 60px;
+		transition: all 0.7s ease;
+		border-radius: 100px;
+
+		&:hover {
+			background-color: $border-darkColor;
+		}
+
+		& svg path {
+			transition: all 0.7s ease;
+		}
+
+		&:hover path {
+			stroke: $text-lightColor;
+		}
+	}
+
+	#arrowRight {
+		rotate: 180deg;
+	}
+
+	&__slider {
+		width: 100%;
+		margin: 0 15px;
+		text-align: center;
+	}
+
+	&__slider-line {
+		white-space: nowrap;
+		scroll-behavior: smooth;
+		overflow: hidden;
+	}
+}
+
+.favCoffee__current-el {
+	display: inline-block;
+	width: 100%;
+}
+
+.favCoffee__slider-el {
+	width: 480px;
+	margin: 0 auto;
+}
+
+.slider-el {
+	&__title {
+		@extend %heading-3;
+		margin-top: 20px;
+		color: $text-darkColor;
+	}
+
+	&__text {
+		@extend %body-textMedium;
+		margin: 15px 0;
+		white-space: normal;
+	}
+
+	&__price {
+		@extend %heading-3;
+		color: $text-darkColor;
+	}
+}
+
+.favCoffee__pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.favCoffee__pagination-rectangle {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 4px;
+	margin-right: 12px;
+	border-radius: 100px;
+	background-color: $border-lightColor;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+#rectangle1 {
+	background-color: $border-darkColor;
+}
