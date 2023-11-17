@@ -1,0 +1,70 @@
+.mobileApp {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__info {
+		width: 630px;
+	}
+
+	&__title {
+		@extend %heading-2;
+		color: $text-darkColor;
+
+		& i {
+			color: $text-accentColor;
+		}
+	}
+
+	&__text {
+		@extend %body-textMedium;
+		color: $text-darkColor;
+		margin: 40px 0;
+	}
+
+	&__link {
+		display: inline-block;
+		width: 200px;
+		border: 1px solid $border-darkColor;
+		border-radius: 100px;
+		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.link__wrapper {
+	display: flex;
+	width: 200px;
+	height: 64px;
+	border-radius: 100px;
+	gap: 8px;
+	align-items: center;
+	padding: 9px 19px;
+	color: $text-darkColor;
+	transition: all 0.7s ease;
+
+	&:hover svg path {
+		fill: $text-lightColor;
+	}
+
+	&:hover {
+		color: $text-lightColor;
+		background-color: $border-darkColor;
+	}
+}
+
+.link__icon svg path {
+	transition: all 0.7s ease;
+}
+
+.link__text {
+	@extend %link-button-style;
+	margin-top: -5px;
+
+	& span {
+		@extend %body-textCaption;
+	}
+}
+
