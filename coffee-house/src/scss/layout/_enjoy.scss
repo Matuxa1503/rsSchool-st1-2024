@@ -1,0 +1,74 @@
+.enjoy {
+	&__background {
+		position: relative;
+		max-width: 100%;
+		height: 644px;
+		border-radius: 40px;
+		background: url("../../src/img/enjoy/bgHero.jpg") center/cover no-repeat;
+	}
+
+	&__info {
+		position: absolute;
+		width: 530px;
+		top: 100px;
+		left: 100px;
+	}
+
+	&__title {
+		@extend %heading-1;
+		color: $text-lightColor;
+
+		& i {
+			color: $text-accentColor;
+		}
+	}
+
+	&__p {
+		@extend %body-textMedium;
+		margin: 40px 0px;
+		color: $text-lightColor;
+	}
+
+	&__link {
+		display: inline-block;
+		@extend %link-button-style;
+		width: 200px;
+		padding: 20px 78px;
+		border-radius: 100px;
+		color: $text-darkColor;
+		background-color: $text-lightColor;
+
+		&:hover .enjoy__link__text::after {
+			opacity: 1;
+			left: 125%;
+		}
+
+		&:hover .enjoy__link__text {
+			transform: translateX(-25%);
+		}
+	}
+
+	&__link__text {
+		position: relative;
+		transition: 0.5s;
+
+		&::after {
+			content: '';
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translateY(-50%);
+			width: 20px;
+			height: 20px;
+			background: url('../../src/img/enjoy/coffee-cup.svg') no-repeat;
+			transition: 0.5s;
+		}
+	}
+}
+
+
+
+
+
+

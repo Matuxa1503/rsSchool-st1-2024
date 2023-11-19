@@ -1,0 +1,81 @@
+.about__title {
+	@extend %heading-2;
+	margin-bottom: 40px;
+
+	& i {
+		color: $text-accentColor;
+	}
+}
+
+.about__grid {
+	display: grid;
+	gap: 40px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid__item-wrapper {
+	max-width: 660px;
+	height: 430px;
+	border-radius: 20px;
+	overflow: hidden;
+
+	&:first-child {
+		max-width: 660px;
+		height: 590px;
+	}
+
+	&:last-child {
+		max-width: 660px;
+		height: 590px;
+		margin-top: -160px;
+	}
+}
+
+.grid__item1 {
+	background: url("../../../src/img/about/about1.png") center/cover no-repeat;
+	max-width: 660px;
+	height: 590px;
+	transition: 0.5s;
+	transform: scale(1.1);
+
+	&:hover {
+		transform: scale(1.0);
+	}
+}
+
+.grid__item2 {
+	background: url("../../../src/img/about/about2.png") center/cover no-repeat;
+	max-width: 660px;
+	height: 430px;
+	transition: 0.5s;
+	transform: scale(1.1);
+
+	&:hover {
+		transform: scale(1.0);
+	}
+}
+
+.grid__item3 {
+	background: url("../../../src/img/about/about3.png") center/cover no-repeat;
+	max-width: 660px;
+	height: 430px;
+	transition: 0.5s;
+	transform: scale(1.1);
+
+	&:hover {
+		transform: scale(1.0);
+	}
+}
+
+.grid__item4 {
+	background: url("../../../src/img/about/about4.png") center/cover no-repeat;
+	max-width: 660px;
+	height: 590px;
+	transition: 0.5s;
+	transform: scale(1.1);
+
+	&:hover {
+		transform: scale(1.0);
+	}
+}
+

@@ -1,0 +1,53 @@
+$text-darkColor: #403F3D;
+$text-lightColor: #E1D4C9;
+$text-accentColor: #B0907A;
+
+$border-darkColor: #665F55;
+$border-lightColor: #C1B6AD;
+
+//* Desktop and Tablet heading*//
+%heading-1 {
+	font-size: 72px;
+	font-weight: 600;
+	line-height: 105%;
+}
+
+%heading-2 {
+	font-size: 60px;
+	font-weight: 600;
+	line-height: 125%;
+}
+
+%heading-3 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 125%;
+}
+
+%body-textMedium {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+%body-textCaption {
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 140%;
+}
+
+%link-button-style {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 150%;
+}
+
+%burger-link-style {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 125%;
+}
+
+@function rem($value) {
+	@return $value / 16px;
+}
