@@ -2,15 +2,18 @@
 	.nav__item {
 		margin-right: 20px;
 	}
-}
+} // end 1000px
 
 @media screen and (max-width: 768px) {
+
+	// header
 	.header {
 		&__btn-container {
 			display: none;
 		}
 
 		&__burger__container {
+			display: block;
 			width: 44px;
 			height: 44px;
 			border: 1px solid $border-darkColor;
@@ -56,4 +59,71 @@
 	.nav {
 		display: none;
 	}
-}
+
+	// enjoy
+	.enjoy {
+		&__info {
+			left: 60px;
+		}
+
+		&__link__text {
+			transform: translateX(-25%);
+			&::after {
+				opacity: 1;
+				left: 115%;
+			}
+		}
+	}
+} // end 768px
+
+
+@media screen and (max-width: 700px) {
+	.enjoy {
+		&__title {
+			font-size: 52px;
+		}
+		&__info {
+			width: 400px;
+		}
+	}
+} // end 700px
+
+@media screen and (max-width: 550px) {
+	.enjoy {
+		&__title {
+			font-size: 42px;
+			line-height: 115%;
+		}
+		&__info {
+			width: 316px;
+		}
+	}
+} // end 550px
+
+@media screen and (max-width: 450px) {
+	.enjoy {
+		&__background {
+			height: 550px;
+		}
+		&__info {
+			top: 62px;
+			left: 15px;
+		}
+		&__p {
+			margin: 39px 0px;
+		}
+	}
+} // end 450px
+
+@media screen and (max-width: 365px) {
+	.enjoy {
+		&__title {
+			font-size: 22px;
+		}
+		&__info {
+			width: 200px;
+			top: 62px;
+			left: 15px;
+		}
+	}
+} // end 365px
