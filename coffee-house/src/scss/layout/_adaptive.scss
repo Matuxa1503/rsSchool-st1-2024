@@ -1,7 +1,10 @@
 @media screen and (max-width: 1000px) {
+	// header
 	.nav__item {
 		margin-right: 20px;
 	}
+
+
 } // end 1000px
 
 @media screen and (max-width: 768px) {
@@ -68,16 +71,45 @@
 
 		&__link__text {
 			transform: translateX(-25%);
+
 			&::after {
 				opacity: 1;
 				left: 115%;
 			}
 		}
 	}
-} // end 768px
+
+	// about
+	.about__grid {
+		grid-template-columns: 1fr;
+	}
+
+		.grid__item-wrapper {
+			max-width: 688px;
+	
+			&:nth-child(2),
+			&:nth-child(3) {
+				display: none;
+			}
+	
+			&:last-child {
+				grid-row-start: 2;
+				margin-top: 0;
+			}
+		}
+
+	.grid__item-wrapper:first-child .grid__item,
+	.grid__item-wrapper:nth-child(2) .grid__item,
+	.grid__item-wrapper:nth-child(3) .grid__item,
+	.grid__item-wrapper:last-child .grid__item {
+		max-width: 688px;
+		transform: scale(1.05);
+	}
+}// end 768px
 
 
 @media screen and (max-width: 700px) {
+	// enjoy
 	.enjoy {
 		&__title {
 			font-size: 52px;
@@ -87,14 +119,21 @@
 		}
 	}
 
+	// favCoffee
 	.favCoffee {
 		&__btn {
 			display: none;
 		}
 	}
+
+	// about
+	.about__title {
+		font-size: 45px;
+	}
 } // end 700px
 
 @media screen and (max-width: 550px) {
+	// enjoy
 	.enjoy {
 		&__title {
 			font-size: 42px;
@@ -105,6 +144,7 @@
 		}
 	}
 
+	// favCoffee
 	.favCoffee__title {
 		font-size: 32px;
 	}
@@ -112,9 +152,19 @@
 	.carousel__item__img {
 		width: 348px;
 	}
+
+	// about
+		.about__title {
+			font-size: 32px;
+	}
+
+	.grid__item-wrapper .grid__item {
+		transform: scale(1.2);
+	}
 } // end 550px
 
 @media screen and (max-width: 450px) {
+	// enjoy
 	.enjoy {
 		&__background {
 			height: 550px;
@@ -130,6 +180,7 @@
 } // end 450px
 
 @media screen and (max-width: 365px) {
+	// enjoy
 	.enjoy {
 		&__title {
 			font-size: 22px;
@@ -141,7 +192,14 @@
 		}
 	}
 
+	// favCoffee
 	.carousel__item__img {
 		max-width: 200px;
+	}
+
+	// about
+	.grid__item-wrapper:first-child,
+	.grid__item-wrapper:last-child {
+		height: 390px;
 	}
 } // end 365px

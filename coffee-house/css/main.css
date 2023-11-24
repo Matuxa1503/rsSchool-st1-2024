@@ -332,57 +332,47 @@ p {
   overflow: hidden;
 }
 .grid__item-wrapper:first-child {
-  max-width: 660px;
   height: 590px;
 }
 .grid__item-wrapper:last-child {
-  max-width: 660px;
   height: 590px;
   margin-top: -160px;
 }
 
-.grid__item1 {
+.grid__item-wrapper .grid__item {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.grid__item-wrapper .grid__item:hover {
+  transform: scale(1);
+}
+
+.grid__item-wrapper:first-child .grid__item,
+.grid__item-wrapper:last-child .grid__item {
+  max-width: 660px;
+  height: 590px;
+}
+
+.grid__item-wrapper:nth-child(2) .grid__item,
+.grid__item-wrapper:nth-child(3) .grid__item {
+  max-width: 660px;
+  height: 430px;
+}
+
+.grid__item-wrapper:first-child .grid__item {
   background: url("../../../src/img/about/about1.png") center/cover no-repeat;
-  max-width: 660px;
-  height: 590px;
-  transition: 0.5s;
-  transform: scale(1.1);
-}
-.grid__item1:hover {
-  transform: scale(1);
 }
 
-.grid__item2 {
+.grid__item-wrapper:nth-child(2) .grid__item {
   background: url("../../../src/img/about/about2.png") center/cover no-repeat;
-  max-width: 660px;
-  height: 430px;
-  transition: 0.5s;
-  transform: scale(1.1);
-}
-.grid__item2:hover {
-  transform: scale(1);
 }
 
-.grid__item3 {
+.grid__item-wrapper:nth-child(3) .grid__item {
   background: url("../../../src/img/about/about3.png") center/cover no-repeat;
-  max-width: 660px;
-  height: 430px;
-  transition: 0.5s;
-  transform: scale(1.1);
-}
-.grid__item3:hover {
-  transform: scale(1);
 }
 
-.grid__item4 {
+.grid__item-wrapper:last-child .grid__item {
   background: url("../../../src/img/about/about4.png") center/cover no-repeat;
-  max-width: 660px;
-  height: 590px;
-  transition: 0.5s;
-  transform: scale(1.1);
-}
-.grid__item4:hover {
-  transform: scale(1);
 }
 
 .mobileApp {
@@ -738,6 +728,26 @@ button:disabled {
     opacity: 1;
     left: 115%;
   }
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .grid__item-wrapper {
+    max-width: 688px;
+  }
+  .grid__item-wrapper:nth-child(2), .grid__item-wrapper:nth-child(3) {
+    display: none;
+  }
+  .grid__item-wrapper:last-child {
+    grid-row-start: 2;
+    margin-top: 0;
+  }
+  .grid__item-wrapper:first-child .grid__item,
+  .grid__item-wrapper:nth-child(2) .grid__item,
+  .grid__item-wrapper:nth-child(3) .grid__item,
+  .grid__item-wrapper:last-child .grid__item {
+    max-width: 688px;
+    transform: scale(1.05);
+  }
 }
 @media screen and (max-width: 700px) {
   .enjoy__title {
@@ -748,6 +758,9 @@ button:disabled {
   }
   .favCoffee__btn {
     display: none;
+  }
+  .about__title {
+    font-size: 45px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -763,6 +776,12 @@ button:disabled {
   }
   .carousel__item__img {
     width: 348px;
+  }
+  .about__title {
+    font-size: 32px;
+  }
+  .grid__item-wrapper .grid__item {
+    transform: scale(1.2);
   }
 }
 @media screen and (max-width: 450px) {
@@ -788,5 +807,9 @@ button:disabled {
   }
   .carousel__item__img {
     max-width: 200px;
+  }
+  .grid__item-wrapper:first-child,
+  .grid__item-wrapper:last-child {
+    height: 390px;
   }
 }
