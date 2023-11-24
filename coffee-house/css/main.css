@@ -10,13 +10,13 @@
   line-height: 125%;
 }
 
-.item__price, .item__title, .contacts__title, .slider-el__price, .slider-el__title {
+.item__price, .item__title, .contacts__title, .carousel__item__price, .carousel__item__title {
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
 }
 
-.item__text, .mobileApp__text, .slider-el__text, .enjoy__p {
+.item__text, .mobileApp__text, .carousel__item__text, .enjoy__p {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -232,10 +232,12 @@ p {
 .favCoffee__title i {
   color: #B0907A;
 }
-.favCoffee__slider-container {
+.favCoffee__carousel {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 .favCoffee__btn {
   background: none;
@@ -253,48 +255,11 @@ p {
 .favCoffee__btn:hover path {
   stroke: #E1D4C9;
 }
-.favCoffee #arrowRight {
-  rotate: 180deg;
-}
-.favCoffee__slider {
-  width: 100%;
-  margin: 0 15px;
-  text-align: center;
-}
-.favCoffee__slider-line {
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  overflow: hidden;
-}
-
-.favCoffee__current-el {
-  display: inline-block;
-  width: 100%;
-}
-
-.favCoffee__slider-el {
-  width: 480px;
-  margin: 0 auto;
-}
-
-.slider-el__title {
-  margin-top: 20px;
-  color: #403F3D;
-}
-.slider-el__text {
-  margin: 15px 0;
-  white-space: normal;
-}
-.slider-el__price {
-  color: #403F3D;
-}
-
 .favCoffee__pagination {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-
 .favCoffee__pagination-rectangle {
   content: "";
   display: block;
@@ -310,6 +275,41 @@ p {
 
 #rectangle1 {
   background-color: #665F55;
+}
+
+#arrowRight {
+  rotate: 180deg;
+}
+
+.carousel__container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel__item {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+}
+.carousel__item.active, .carousel__item.next {
+  display: block;
+}
+.carousel__item.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel__item__title {
+  margin-top: 20px;
+  color: #403F3D;
+}
+.carousel__item__text {
+  max-width: 480px;
+  margin: 15px auto;
+  white-space: normal;
+}
+.carousel__item__price {
+  color: #403F3D;
 }
 
 .about__title {
@@ -746,6 +746,9 @@ button:disabled {
   .enjoy__info {
     width: 400px;
   }
+  .favCoffee__btn {
+    display: none;
+  }
 }
 @media screen and (max-width: 550px) {
   .enjoy__title {
@@ -754,6 +757,12 @@ button:disabled {
   }
   .enjoy__info {
     width: 316px;
+  }
+  .favCoffee__title {
+    font-size: 32px;
+  }
+  .carousel__item__img {
+    width: 348px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -776,5 +785,8 @@ button:disabled {
     width: 200px;
     top: 62px;
     left: 15px;
+  }
+  .carousel__item__img {
+    max-width: 200px;
   }
 }

@@ -86,6 +86,12 @@
 			width: 400px;
 		}
 	}
+
+	.favCoffee {
+		&__btn {
+			display: none;
+		}
+	}
 } // end 700px
 
 @media screen and (max-width: 550px) {
@@ -97,6 +103,14 @@
 		&__info {
 			width: 316px;
 		}
+	}
+
+	.favCoffee__title {
+		font-size: 32px;
+	}
+
+	.carousel__item__img {
+		width: 348px;
 	}
 } // end 550px
 
@@ -125,5 +139,9 @@
 			top: 62px;
 			left: 15px;
 		}
+	}
+
+	.carousel__item__img {
+		max-width: 200px;
 	}
 } // end 365px

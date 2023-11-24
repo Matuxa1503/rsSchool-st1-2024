@@ -67,40 +67,52 @@
 
 			<section class="favCoffee margin-section" id="favorites">
 				<h2 class="favCoffee__title">Choose your <i>favorite</i> coffee</h2>
-				<div class="favCoffee__slider-container">
-					<button class="favCoffee__btn" id="arrowLeft">
+				<div class="favCoffee__carousel">
+					<div class="favCoffee__btn" id="arrowLeft">
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
-							<path d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+							<rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
+							<path d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
-					</button>
-					<div class="favCoffee__slider">
-						<div class="favCoffee__slider-line">
-							<div class="favCoffee__current-el">
-								<div class="favCoffee__slider-el">
-									<img class="slider-el__img" src="src/img/favorites/coffee1.png" alt="">
-									<h3 class="slider-el__title">S’mores Frappuccino</h3>
-									<p class="slider-el__text">
-										This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
-									</p>
-									<h3 class="slider-el__price">$5.50</h3>
-								</div>
-							</div>
+					</div>
+					<div class="carousel__container">
+						<div class="carousel__item active">
+							<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
+							<h3 class="carousel__item__title">S’mores Frappuccino</h3>
+							<p class="carousel__item__text">
+								This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+							</p>
+							<h3 class="carousel__item__price">$5.50</h3>
+						</div>
+						<div class="carousel__item">
+							<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
+							<h3 class="carousel__item__title">S’mores Frappuccino</h3>
+							<p class="carousel__item__text">
+								This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+							</p>
+							<h3 class="carousel__item__price">$5.50</h3>
+						</div>
+						<div class="carousel__item">
+							<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
+							<h3 class="carousel__item__title">S’mores Frappuccino</h3>
+							<p class="carousel__item__text">
+								This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+							</p>
+							<h3 class="carousel__item__price">$5.50</h3>
 						</div>
 					</div>
-					<button class="favCoffee__btn" id="arrowRight">
+					<div class="favCoffee__btn" id="arrowRight">
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
-							<path d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+							<rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
+							<path d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
-					</button>
+					</div>
 				</div>
 				<div class="favCoffee__pagination">
-						<span class="favCoffee__pagination-rectangle" id="rectangle1"></span>
-						<span class="favCoffee__pagination-rectangle" id="rectangle2"></span>
-						<span class="favCoffee__pagination-rectangle" id="rectangle3"></span>
+					<span class="favCoffee__pagination-rectangle" id="rectangle1"></span>
+					<span class="favCoffee__pagination-rectangle" id="rectangle2"></span>
+					<span class="favCoffee__pagination-rectangle" id="rectangle3"></span>
 				</div>
-			</section> <!-- /favCoffee -->
+			</section>  <!-- /favCoffee -->
 
 			<section class="about margin-section" id="about">
 				<h2 class="about__title">Resource is <i>the perfect and cozy place</i> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
