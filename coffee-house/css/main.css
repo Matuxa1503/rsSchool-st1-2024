@@ -668,6 +668,25 @@ button:disabled {
   color: #403F3D;
 }
 
+.menu__btn {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid #665F55;
+  border-radius: 100px;
+  padding: 18px;
+  margin: 40px auto 0;
+}
+
+@media screen and (max-width: 1439px) {
+  .menu__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 13px;
+    justify-items: center;
+  }
+}
 @media screen and (max-width: 1135px) {
   .mobileApp__link {
     margin-bottom: 20px;
@@ -777,6 +796,14 @@ button:disabled {
     max-width: 688px;
     transform: scale(1.05);
   }
+  .menu__grid {
+    grid-template-rows: 1fr 1fr;
+    height: 1052px;
+    overflow-y: hidden;
+  }
+  .menu__btn {
+    display: inline-block;
+  }
 }
 @media screen and (max-width: 700px) {
   .enjoy__title {
@@ -799,6 +826,10 @@ button:disabled {
   }
   .mobileApp__img img {
     width: 500px;
+  }
+  .menu__grid {
+    grid-template-columns: 1fr;
+    height: 2144px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -837,6 +868,12 @@ button:disabled {
   .social__title {
     font-size: 32px;
     margin-bottom: 37px;
+  }
+  .info__title {
+    font-size: 32px;
+  }
+  .info__type-btn {
+    margin-right: 7px;
   }
 }
 @media screen and (max-width: 456px) {
@@ -877,5 +914,25 @@ button:disabled {
   }
   .mobileApp__img img {
     width: 200px;
+  }
+  .menu__grid {
+    height: 2350px;
+  }
+  .info__block-btn {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .menu__item {
+    width: 200px;
+    height: 550px;
+  }
+  .item__img-wrapper {
+    width: auto;
+  }
+  .item__img {
+    width: auto;
+  }
+  .item__price {
+    position: static;
   }
 }

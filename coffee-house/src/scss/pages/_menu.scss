@@ -159,3 +159,14 @@ button:disabled {
 	color: $text-darkColor;
 }
 
+.menu__btn {
+	display: none;
+	cursor: pointer;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	border: 1px solid $border-darkColor;
+	border-radius: 100px;
+	padding: 18px;
+	margin: 40px auto 0;
+}
