@@ -241,6 +241,7 @@ p {
 }
 .favCoffee__btn {
   background: none;
+  cursor: pointer;
   width: 60px;
   height: 60px;
   transition: all 0.7s ease;
@@ -667,9 +668,20 @@ button:disabled {
   color: #403F3D;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1006px) {
   .nav__item {
     margin-right: 20px;
+  }
+  .mobileApp {
+    display: block;
+  }
+  .mobileApp__info {
+    width: 100%;
+  }
+  .mobileApp__img {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -762,6 +774,15 @@ button:disabled {
   .about__title {
     font-size: 45px;
   }
+  .mobileApp__title {
+    font-size: 45px;
+  }
+  .mobileApp__img {
+    margin-top: 37px;
+  }
+  .mobileApp__img img {
+    width: 500px;
+  }
 }
 @media screen and (max-width: 550px) {
   .enjoy__title {
@@ -780,11 +801,20 @@ button:disabled {
   .about__title {
     font-size: 32px;
   }
-  .grid__item-wrapper .grid__item {
+  .grid__item-wrapper:first-child .grid__item,
+  .grid__item-wrapper:nth-child(2) .grid__item,
+  .grid__item-wrapper:nth-child(3) .grid__item,
+  .grid__item-wrapper:last-child .grid__item {
     transform: scale(1.2);
   }
+  .mobileApp__title {
+    font-size: 32px;
+  }
+  .mobileApp__img img {
+    width: 348px;
+  }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 456px) {
   .enjoy__background {
     height: 550px;
   }
@@ -794,6 +824,14 @@ button:disabled {
   }
   .enjoy__p {
     margin: 39px 0px;
+  }
+  .mobileApp__link {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .mobileApp__link:last-child {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 365px) {
@@ -811,5 +849,8 @@ button:disabled {
   .grid__item-wrapper:first-child,
   .grid__item-wrapper:last-child {
     height: 390px;
+  }
+  .mobileApp__img img {
+    width: 200px;
   }
 }

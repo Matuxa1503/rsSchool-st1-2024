@@ -1,14 +1,27 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1006px) {
 	// header
 	.nav__item {
 		margin-right: 20px;
 	}
 
+	// mobileApp
+	.mobileApp {
+		display: block;
 
-} // end 1000px
+		&__info {
+			width: 100%;
+		}
+
+		&__img {
+			max-width: 100%;
+			text-align: center;
+			margin-top: 100px;
+		}
+	}
+}
+// end 1006px
 
 @media screen and (max-width: 768px) {
-
 	// header
 	.header {
 		&__btn-container {
@@ -84,19 +97,19 @@
 		grid-template-columns: 1fr;
 	}
 
-		.grid__item-wrapper {
-			max-width: 688px;
-	
-			&:nth-child(2),
-			&:nth-child(3) {
-				display: none;
-			}
-	
-			&:last-child {
-				grid-row-start: 2;
-				margin-top: 0;
-			}
+	.grid__item-wrapper {
+		max-width: 688px;
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			display: none;
 		}
+
+		&:last-child {
+			grid-row-start: 2;
+			margin-top: 0;
+		}
+	}
 
 	.grid__item-wrapper:first-child .grid__item,
 	.grid__item-wrapper:nth-child(2) .grid__item,
@@ -105,7 +118,8 @@
 		max-width: 688px;
 		transform: scale(1.05);
 	}
-}// end 768px
+}
+// end 768px
 
 
 @media screen and (max-width: 700px) {
@@ -114,6 +128,7 @@
 		&__title {
 			font-size: 52px;
 		}
+
 		&__info {
 			width: 400px;
 		}
@@ -130,7 +145,24 @@
 	.about__title {
 		font-size: 45px;
 	}
-} // end 700px
+
+	// mobileApp
+	.mobileApp {
+		&__title {
+			font-size: 45px;
+		}
+
+		&__img {
+			margin-top: 37px;
+
+			& img {
+				width: 500px;
+			}
+		}
+	}
+}
+// end 700px
+
 
 @media screen and (max-width: 550px) {
 	// enjoy
@@ -139,6 +171,7 @@
 			font-size: 42px;
 			line-height: 115%;
 		}
+
 		&__info {
 			width: 316px;
 		}
@@ -154,30 +187,59 @@
 	}
 
 	// about
-		.about__title {
-			font-size: 32px;
+	.about__title {
+		font-size: 32px;
 	}
 
-	.grid__item-wrapper .grid__item {
+	.grid__item-wrapper:first-child .grid__item,
+	.grid__item-wrapper:nth-child(2) .grid__item,
+	.grid__item-wrapper:nth-child(3) .grid__item,
+	.grid__item-wrapper:last-child .grid__item {
 		transform: scale(1.2);
 	}
-} // end 550px
 
-@media screen and (max-width: 450px) {
+	// mobileApp
+	.mobileApp {
+		&__title {
+			font-size: 32px;
+		}
+
+		&__img img {
+			width: 348px;
+		}
+	}
+}
+// end 550px
+
+@media screen and (max-width: 456px) {
 	// enjoy
 	.enjoy {
 		&__background {
 			height: 550px;
 		}
+
 		&__info {
 			top: 62px;
 			left: 15px;
 		}
+
 		&__p {
 			margin: 39px 0px;
 		}
 	}
-} // end 450px
+
+	// mobileApp
+	.mobileApp__link {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+// end 456px
 
 @media screen and (max-width: 365px) {
 	// enjoy
@@ -185,6 +247,7 @@
 		&__title {
 			font-size: 22px;
 		}
+
 		&__info {
 			width: 200px;
 			top: 62px;
@@ -202,4 +265,10 @@
 	.grid__item-wrapper:last-child {
 		height: 390px;
 	}
-} // end 365px
+
+	// mobileApp
+	.mobileApp__img img {
+		width: 200px;
+	}
+}
+// end 365px
