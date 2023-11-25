@@ -668,6 +668,11 @@ button:disabled {
   color: #403F3D;
 }
 
+@media screen and (max-width: 1135px) {
+  .mobileApp__link {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 1006px) {
   .nav__item {
     margin-right: 20px;
@@ -678,10 +683,22 @@ button:disabled {
   .mobileApp__info {
     width: 100%;
   }
+  .mobileApp__link {
+    margin-bottom: 0;
+  }
   .mobileApp__img {
     max-width: 100%;
     text-align: center;
     margin-top: 100px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 107px;
+    padding: 100px 60px 110px;
+    align-items: start;
+  }
+  .social__title {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -812,6 +829,14 @@ button:disabled {
   }
   .mobileApp__img img {
     width: 348px;
+  }
+  .footer {
+    padding: 60px 16px 70px;
+    gap: 50px;
+  }
+  .social__title {
+    font-size: 32px;
+    margin-bottom: 37px;
   }
 }
 @media screen and (max-width: 456px) {
