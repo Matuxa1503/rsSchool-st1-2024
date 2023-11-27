@@ -1,3 +1,159 @@
+@media (hover: hover) {
+	// header
+	.nav__item:hover::after {
+		width: 100%;
+		opacity: 1;
+	}
+
+	.header__btn-container:hover::after {
+		width: 100%;
+		opacity: 1;
+	}
+
+	// enjoy
+	.enjoy__link {
+		&:hover .enjoy__link__text::after {
+			opacity: 1;
+			left: 115%;
+		}
+
+		&:hover .enjoy__link__text {
+			transform: translateX(-25%);
+		}
+	}
+
+	// favCoffee
+	.favCoffee__btn {
+		&:hover {
+			background-color: $border-darkColor;
+		}
+
+		&:hover path {
+			stroke: $text-lightColor;
+		}
+	}
+
+	// about
+	.grid__item-wrapper .grid__item:hover {
+		transform: scale(1.0);
+	}
+
+	// mobileApp
+	.link__wrapper {
+		&:hover {
+			color: $text-lightColor;
+			background-color: $border-darkColor;
+		}
+
+		&:hover svg path {
+			fill: $text-lightColor;
+		}
+	}
+
+	// footer
+	.social__icon {
+		&:hover {
+			background-color: $text-lightColor;
+		}
+
+		&:hover svg path {
+			stroke: #000;
+		}
+	}
+
+	.contacts__info {
+		&:hover::after {
+			width: 100%;
+			opacity: 1;
+		}
+
+		&:last-child {
+			&:hover:after {
+				width: 0;
+			}
+		}
+	}
+
+	// menu
+	.info {
+		&__type-btn {
+			&:hover {
+				background: $border-darkColor;
+				color: $text-lightColor;
+			}
+		}
+	}
+
+	.menu__item:hover .item__img {
+		transform: scale(1.0);
+	}
+}
+// end hover: hover
+
+@media (hover: none) {
+	// enjoy
+	.enjoy {
+		&__link__text::after {
+			opacity: 1;
+			left: 115%;
+		}
+
+		&__link__text {
+			transform: translateX(-25%);
+		}
+	}
+
+	// favCoffee
+	.favCoffee__btn {
+		transition: 0.1s;
+
+		& svg path {
+			transition: 0.1s;
+		}
+
+		&:active {
+			background-color: $border-darkColor;
+		}
+
+		&:active path {
+			stroke: $text-lightColor;
+		}
+	}
+
+	// mobileApp
+	.link__wrapper {
+		transition: 0.1s;
+
+		&:active {
+			color: $text-lightColor;
+			background-color: $border-darkColor;
+		}
+
+		&:active svg path {
+			fill: $text-lightColor;
+		}
+	}
+
+	.link__icon svg path {
+		transition: 0.1s;
+	}
+
+	// footer
+	.social__icon {
+		transition: 0.1s;
+
+		&:active {
+			background-color: $text-lightColor;
+		}
+
+		&:active svg path {
+			stroke: #000;
+		}
+	}
+}
+// end hover: none
+// end hovers
+
 @media screen and (max-width: 1439px) {
 	.menu__grid {
 		grid-template-columns: 1fr 1fr;

@@ -26,16 +26,8 @@
 		transition: all 0.7s ease;
 		border-radius: 100px;
 
-		&:hover {
-			background-color: $border-darkColor;
-		}
-
 		& svg path {
 			transition: all 0.7s ease;
-		}
-
-		&:hover path {
-			stroke: $text-lightColor;
 		}
 	}
 

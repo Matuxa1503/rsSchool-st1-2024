@@ -42,11 +42,6 @@
 			margin-right: 0;
 		}
 
-		&:hover {
-			background: $border-darkColor;
-			color: $text-lightColor;
-		}
-
 		.info__wrapper-svg {
 			position: relative;
 			width: 30px;
@@ -88,10 +83,6 @@ button:disabled {
 	border: 1px solid $border-lightColor;
 	border-radius: 40px;
 	cursor: pointer;
-
-	&:hover .item__img {
-		transform: scale(1.0);
-	}
 }
 
 .item__img-wrapper {

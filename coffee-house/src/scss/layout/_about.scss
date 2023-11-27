@@ -32,10 +32,6 @@
 .grid__item-wrapper .grid__item {
 	transition: 0.5s;
 	transform: scale(1.1);
-
-	&:hover {
-		transform: scale(1.0);
-	}
 }
 
 .grid__item-wrapper:first-child .grid__item,
@@ -51,18 +47,18 @@
 }
 
 .grid__item-wrapper:first-child .grid__item {
-	background: url("../../../src/img/about/about1.png") center/cover no-repeat;
+	background: url("../src/img/about/about1.png") center/cover no-repeat;
 }
 
 .grid__item-wrapper:nth-child(2) .grid__item {
-	background: url("../../../src/img/about/about2.png") center/cover no-repeat;
+	background: url("../src/img/about/about2.png") center/cover no-repeat;
 }
 
 .grid__item-wrapper:nth-child(3) .grid__item {
-	background: url("../../../src/img/about/about3.png") center/cover no-repeat;
+	background: url("../src/img/about/about3.png") center/cover no-repeat;
 }
 
 .grid__item-wrapper:last-child .grid__item {
-	background: url("../../../src/img/about/about4.png") center/cover no-repeat;
+	background: url("../src/img/about/about4.png") center/cover no-repeat;
 }
 
