@@ -4,7 +4,7 @@
 		max-width: 100%;
 		height: 644px;
 		border-radius: 40px;
-		background: url("../../../src/img/enjoy/bgHero.jpg") center/cover no-repeat;
+		background: url("../src/img/enjoy/bgHero.jpg") center/cover no-repeat;
 	}
 
 	&__info {
@@ -61,7 +61,7 @@
 			transform: translateY(-50%);
 			width: 20px;
 			height: 20px;
-			background: url('../../../src/img/enjoy/coffee-cup.svg') no-repeat;
+			background: url('../src/img/enjoy/coffee-cup.svg') no-repeat;
 			transition: 0.5s;
 		}
 	}
