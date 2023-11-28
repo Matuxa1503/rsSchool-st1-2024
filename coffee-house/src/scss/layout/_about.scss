@@ -1,6 +1,7 @@
 .about__title {
 	@extend %heading-2;
 	margin-bottom: 40px;
+	color: $text-darkColor;
 
 	& i {
 		color: $text-accentColor;
