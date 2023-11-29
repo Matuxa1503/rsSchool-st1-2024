@@ -320,6 +320,7 @@ p {
   margin-top: -160px;
 }
 
+
 .grid__item-wrapper .grid__item {
   transition: 0.5s;
   transform: scale(1.1);
@@ -562,35 +563,35 @@ button:disabled .info__wrapper-svg {
 }
 
 .linkImg1 {
-  background: url("../../../src/img/menu/coffee/coffee-1.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-1.jpg") center/cover no-repeat;
 }
 
 .linkImg2 {
-  background: url("../../../src/img/menu/coffee/coffee-2.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-2.jpg") center/cover no-repeat;
 }
 
 .linkImg3 {
-  background: url("../../../src/img/menu/coffee/coffee-3.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-3.jpg") center/cover no-repeat;
 }
 
 .linkImg4 {
-  background: url("../../../src/img/menu/coffee/coffee-4.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-4.jpg") center/cover no-repeat;
 }
 
 .linkImg5 {
-  background: url("../../../src/img/menu/coffee/coffee-5.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-5.jpg") center/cover no-repeat;
 }
 
 .linkImg6 {
-  background: url("../../../src/img/menu/coffee/coffee-6.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-6.jpg") center/cover no-repeat;
 }
 
 .linkImg7 {
-  background: url("../../../src/img/menu/coffee/coffee-7.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-7.jpg") center/cover no-repeat;
 }
 
 .linkImg8 {
-  background: url("../../../src/img/menu/coffee/coffee-8.jpg") center/cover no-repeat;
+  background: url("../src/img/menu/coffee/coffee-8.jpg") center/cover no-repeat;
 }
 
 .item__img {
