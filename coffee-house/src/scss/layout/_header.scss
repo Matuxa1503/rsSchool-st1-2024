@@ -6,6 +6,10 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
+	&__burger__container {
+		display: none;
+	}
 }
 
 .nav {
@@ -36,11 +40,6 @@
 			transition: all 0.7s ease;
 			opacity: 0;
 		}
-
-		&:hover::after {
-			width: 100%;
-			opacity: 1;
-		}
 	}
 
 	&__link {
@@ -70,10 +69,10 @@
 		opacity: 0;
 	}
 
-	&:hover::after {
-		width: 100%;
-		opacity: 1;
-	}
+	// &:hover::after {
+	// 	width: 100%;
+	// 	opacity: 1;
+	// }
 }
 
 .btn__coffee {
