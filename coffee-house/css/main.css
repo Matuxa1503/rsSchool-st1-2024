@@ -523,6 +523,7 @@ p {
   margin-right: 8px;
   background: #C1B6AD;
   border-radius: 100px;
+  transition: all 0.7s ease;
 }
 .info__type-btn svg {
   position: absolute;
@@ -534,6 +535,9 @@ button:disabled {
   cursor: default;
   background: #665F55;
   color: #E1D4C9;
+}
+button:disabled .info__wrapper-svg {
+  background-color: #E1D4C9;
 }
 
 .menu__grid {
@@ -678,6 +682,9 @@ button:disabled {
   .info__type-btn:hover {
     background: #665F55;
     color: #E1D4C9;
+  }
+  .info__type-btn:hover .info__wrapper-svg {
+    background-color: #E1D4C9;
   }
   .menu__item:hover .item__img {
     transform: scale(1);

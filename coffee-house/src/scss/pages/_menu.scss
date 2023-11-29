@@ -49,6 +49,7 @@
 			margin-right: 8px;
 			background: $border-lightColor;
 			border-radius: 100px;
+			transition: all 0.7s ease;
 		}
 
 		& svg {
@@ -68,6 +69,10 @@ button:disabled {
 	cursor: default;
 	background: $border-darkColor;
 	color: $text-lightColor;
+
+	& .info__wrapper-svg {
+		background-color: $text-lightColor;
+	}
 }
 
 

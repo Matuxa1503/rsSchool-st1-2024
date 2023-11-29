@@ -76,11 +76,13 @@
 
 	// menu
 	.info {
-		&__type-btn {
-			&:hover {
-				background: $border-darkColor;
-				color: $text-lightColor;
-			}
+		&__type-btn:hover {
+			background: $border-darkColor;
+			color: $text-lightColor;
+		}
+
+		&__type-btn:hover .info__wrapper-svg {
+			background-color: $text-lightColor;
 		}
 	}
 
