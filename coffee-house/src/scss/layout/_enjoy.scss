@@ -37,15 +37,6 @@
 		border-radius: 100px;
 		color: $text-darkColor;
 		background-color: $text-lightColor;
-
-		&:hover .enjoy__link__text::after {
-			opacity: 1;
-			left: 125%;
-		}
-
-		&:hover .enjoy__link__text {
-			transform: translateX(-25%);
-		}
 	}
 
 	&__link__text {

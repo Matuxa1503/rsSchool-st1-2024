@@ -42,11 +42,6 @@
 			margin-right: 0;
 		}
 
-		&:hover {
-			background: $border-darkColor;
-			color: $text-lightColor;
-		}
-
 		.info__wrapper-svg {
 			position: relative;
 			width: 30px;
@@ -54,6 +49,7 @@
 			margin-right: 8px;
 			background: $border-lightColor;
 			border-radius: 100px;
+			transition: all 0.7s ease;
 		}
 
 		& svg {
@@ -73,6 +69,10 @@ button:disabled {
 	cursor: default;
 	background: $border-darkColor;
 	color: $text-lightColor;
+
+	& .info__wrapper-svg {
+		background-color: $text-lightColor;
+	}
 }
 
 
@@ -88,10 +88,6 @@ button:disabled {
 	border: 1px solid $border-lightColor;
 	border-radius: 40px;
 	cursor: pointer;
-
-	&:hover .item__img {
-		transform: scale(1.0);
-	}
 }
 
 .item__img-wrapper {
@@ -159,3 +155,14 @@ button:disabled {
 	color: $text-darkColor;
 }
 
+.menu__btn {
+	display: none;
+	cursor: pointer;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	border: 1px solid $border-darkColor;
+	border-radius: 100px;
+	padding: 18px;
+	margin: 40px auto 0;
+}

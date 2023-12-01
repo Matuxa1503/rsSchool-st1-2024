@@ -44,15 +44,6 @@
 	padding: 9px 19px;
 	color: $text-darkColor;
 	transition: all 0.7s ease;
-
-	&:hover svg path {
-		fill: $text-lightColor;
-	}
-
-	&:hover {
-		color: $text-lightColor;
-		background-color: $border-darkColor;
-	}
 }
 
 .link__icon svg path {
