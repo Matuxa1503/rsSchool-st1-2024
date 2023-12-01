@@ -1,10 +1,14 @@
 .header {
+	width: 100%;
 	padding: 20px 0;
 
 &__wrapper {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+	}
+
+	&__logo {
+		width: 100px;
 	}
 
 	&__burger__container {
@@ -13,6 +17,12 @@
 }
 
 .nav {
+	margin-left: auto;
+	&__content {
+		display: flex;
+		width: 100%;
+	}
+	
 	&__list {
 		display: flex;
 	}
@@ -50,6 +60,7 @@
 .header__btn-container {
 	display: flex;
 	align-items: center;
+	margin-left: auto;
 	position: relative;
 	cursor: pointer;
 	color: $text-darkColor;
