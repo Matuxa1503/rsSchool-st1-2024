@@ -454,8 +454,13 @@
 		font-size: 32px;
 	}
 
-	.carousel__item__img {
-		width: 348px;
+	.carousel {
+		&__container {
+			width: 348px;
+		}
+		&__item__img {
+			width: 348px;
+		}
 	}
 
 	// about
@@ -550,8 +555,15 @@
 	}
 
 	// favCoffee
-	.carousel__item__img {
-		max-width: 200px;
+
+	.carousel {
+		&__container {
+			width: 200px;
+		}
+
+		&__item__img {
+			max-width: 200px;
+		}
 	}
 
 	// about
