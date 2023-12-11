@@ -7,15 +7,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Inter:regular,600&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/svg" sizes="32x32" href="src/img/enjoy/coffee-cup-favicon.svg">
 	<title>Menu</title>
+	<script type="module" defer src="menu.js"></script>
 </head>
 
 <body>
+	<div class="backgroundFill"></div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__wrapper">
 				<a href="index.html" class="header__logo">
 					<img src="src/img/header/logo.svg" alt="">
 				</a>
+				<div class="nav__content">
 				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__item">
@@ -28,7 +31,7 @@
 							<a href="./index.html#mobileApp" class="nav__link">Mobile app</a>
 						</li>
 						<li class="nav__item">
-							<a href="#contacts" class="nav__link">Contacts us</a>
+							<a href="#contacts" class="nav__link">Contact us</a>
 						</li>
 					</ul>
 				</nav>
@@ -50,7 +53,7 @@
 							stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 					</svg>
 				</div>
-        
+        </div>
 				<div class="header__burger__container">
 					<div class="header__burger-icon">
 						<span class="span__burger"></span>
@@ -63,7 +66,7 @@
 			<div class="menu__info">
 				<h1 class="info__title">Behind each of our cups hides an <i>amazing surprise</i></h1>
 				<div class="info__block-btn">
-					<button class="info__type-btn" disabled>
+					<button class="info__type-btn" id="coffee" disabled>
 						<span class="info__wrapper-svg">
 							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -79,7 +82,7 @@
 						</span>
 						<span>Coffee</span>
 					</button>
-					<button class="info__type-btn">
+					<button class="info__type-btn" id="tea">
 						<span class="info__wrapper-svg">
 							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -95,7 +98,7 @@
 						</span>
 						<span>Tea</span>
 					</button>
-					<button class="info__type-btn">
+					<button class="info__type-btn" id="dessert">
 						<span class="info__wrapper-svg">
 							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -114,111 +117,102 @@
 				</div>
 			</div> <!-- /menu__info -->
 
-			<div class="menu__grid">
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg1"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Irish coffee</h3>
-						<p class="item__text">
-							Fragrant black coffee with Jameson Irish whiskey and whipped milk
-						</p>
-						<h3 class="item__price">$7.00</h3>
-					</div>
-				</div> <!-- /menu__item -->
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg2"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Kahlua coffee</h3>
-						<p class="item__text">
-							Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
-						</p>
-						<h3 class="item__price">$7.00</h3>
-					</div>
+			<div class="menu__grid-container activeMenu">
+				<div class="menu__grid">
 				</div>
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg3"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Honey raf</h3>
-						<p class="item__text">
-							Espresso with frothed milk, cream and aromatic honey
-						</p>
-						<h3 class="item__price">$5.50</h3>
-					</div>
-				</div>
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg4"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Ice cappuccino</h3>
-						<p class="item__text">
-							Cappuccino with soft thick foam in summer version with ice
-						</p>
-						<h3 class="item__price">$5.00</h3>
-					</div>
-				</div>
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg5"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Espresso</h3>
-						<p class="item__text">
-							Classic black coffee
-						</p>
-						<h3 class="item__price">$4.50</h3>
-					</div>
-				</div>
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg6"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Latte</h3>
-						<p class="item__text">
-							Espresso coffee with the addition of steamed milk and dense milk foam
-						</p>
-						<h3 class="item__price">$5.50</h3>
-					</div>
-				</div>
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg7"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Latte macchiato</h3>
-						<p class="item__text">
-							Espresso with frothed milk and chocolate
-						</p>
-						<h3 class="item__price">$5.50</h3>
-					</div>
-				</div>
-				<div class="menu__item">
-					<div class="item__img-wrapper">
-						<div class="item__img linkImg8"></div>
-					</div>
-					<div class="item__content">
-						<h3 class="item__title">Coffee with cognac</h3>
-						<p class="item__text">
-							Fragrant black coffee with cognac and whipped cream
-						</p>
-						<h3 class="item__price">$6.50</h3>
-					</div>
-				</div>
-			</div> <!-- /menu__grid -->
-
-			<div class="menu__btn">
-			  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-				<path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-				<path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-			</svg>
 			</div>
+			<div class="menu__grid-container">
+				<div class="menu__grid">
+				</div>
+			</div>
+
+			<div class="menu__grid-container">
+				<div class="menu__grid">
+				</div>
+			</div>
+			<div class="modal__menu">
+				<div class="menu__wrapper">
+					<img class="menu__img"  alt="">
+					<div class="menu__content">
+						<h3 class="menu__title"></h3>
+						<p class="menu__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+						<div class="menu__size modalPadding">
+							<p class="menu__text">Size</p>
+							<div class="menu__btns">
+								<button class="size__additives__btn sizeModalBtn" id="S" disabled>
+									<span class="size__additives__container-letter">
+										<span class="size__additives__letter">S</span>
+									</span>
+									<span class="size__additives__num sizeModal"></span>
+								</button>
+								<button class="size__additives__btn sizeModalBtn" id="M">
+									<span class="size__additives__container-letter">
+										<span class="size__additives__letter">M</span>
+									</span>
+									<span class="size__additives__num sizeModal"></span>
+								</button>
+								<button class="size__additives__btn sizeModalBtn" id="L">
+									<span class="size__additives__container-letter">
+										<span class="size__additives__letter">L</span>
+									</span>
+									<span class="size__additives__num sizeModal"></span>
+								</button>
+							</div>
+						</div>
+						<div class="menu__additives modalPadding">
+							<p class="menu__text">Additives</p>
+							<div class="menu__btns">
+								<button class="size__additives__btn addivModalBtn" id="addiv1">
+								<span class="size__additives__container-letter">
+									<span class="size__additives__letter">1</span>
+								</span>
+								<span class="size__additives__num additivesModal"></span>
+							</button>
+							<button class="size__additives__btn addivModalBtn" id="addiv2">
+								<span class="size__additives__container-letter">
+									<span class="size__additives__letter">2</span>
+								</span>
+								<span class="size__additives__num additivesModal"></span>
+							</button>
+							<button class="size__additives__btn addivModalBtn" id="addiv3">
+								<span class="size__additives__container-letter">
+									<span class="size__additives__letter">3</span>
+								</span>
+								<span class="size__additives__num additivesModal"></span>
+							</button>
+							</div>
+						</div>
+						<div class="menu__price">
+							<p class="price__text">Total:</p>
+							<p class="price__text"></p>
+						</div>
+						<div class="menu__additional-info">
+							<div class="additional-info__img">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<g clip-path="url(#clip0_268_12877)">
+										<path d="M8 7.66663V11" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M8 5.00667L8.00667 4.99926" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+										<path
+											d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z"
+											stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+									</g>
+									<defs>
+										<clipPath id="clip0_268_12877">
+											<rect width="16" height="16" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+			
+							<p class="additional-info__text">
+								The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty
+								points and enjoy your favorite coffee with up to 20% discount.
+							</p>
+						</div>
+						<button class="menu__close-btn">Close</button>
+					</div>
+				</img>
+			</div> <!-- /modal__menu -->
 		</main>
 
 

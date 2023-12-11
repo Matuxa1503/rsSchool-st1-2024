@@ -51,3 +51,28 @@ $border-lightColor: #C1B6AD;
 @function rem($value) {
 	@return $value / 16px;
 }
+
+%menu-btn-style {
+	display: flex;
+	align-items: center;
+	background: none;
+	border: 1px solid $border-lightColor;
+	padding: 8px 16px 8px 8px;
+	border-radius: 100px;
+}
+
+%menu-contain-btn-style {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+	background: $border-lightColor;
+	border-radius: 100px;
+}
+
+%menu-icon-btn-style {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

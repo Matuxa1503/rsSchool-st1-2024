@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Inter:regular,600&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/svg" sizes="32x32" href="src/img/enjoy/coffee-cup-favicon.svg">
 	<title>Coffee-House</title>
+	<script type="module" defer src="home.js"></script>
 </head>
 
 <body>
@@ -16,31 +17,33 @@
 				<div class="header__logo">
 					<img src="src/img/header/logo.svg" alt="">
 				</div>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a href="#favorites" class="nav__link">Favorite coffee</a>
-						</li>
-						<li class="nav__item">
-							<a href="#about" class="nav__link">About</a>
-						</li>
-						<li class="nav__item">
-							<a href="#mobileApp" class="nav__link">Mobile app</a>
-						</li>
-						<li class="nav__item">
-							<a href="#contacts" class="nav__link">Contacts us</a>
-						</li>
-					</ul>
-				</nav>
-				<a href="menu.html" class="header__btn-container">
-					<p>Menu</p>
-					<svg class="btn__coffee" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-						<path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						<path d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341V5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						<path d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333V4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						<path d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
-				</a>
+				<div class="nav__content">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#favorites" class="nav__link">Favorite coffee</a>
+							</li>
+							<li class="nav__item">
+								<a href="#about" class="nav__link">About</a>
+							</li>
+							<li class="nav__item">
+								<a href="#mobileApp" class="nav__link">Mobile app</a>
+							</li>
+							<li class="nav__item">
+								<a href="#contacts" class="nav__link">Contact us</a>
+							</li>
+						</ul>
+					</nav>
+					<a href="menu.html" class="header__btn-container">
+						<span>Menu</span>
+						<svg class="btn__coffee" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341V5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333V4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+				</div>
 				<div class="header__burger__container">
 					<div class="header__burger-icon">
 						<span class="span__burger"></span>
@@ -52,6 +55,10 @@
 		<main>
 			<section class="enjoy">
 				<div class="enjoy__background">
+					<video class="enjoy__video" autoplay loop muted>
+						<source src="src/video/video (2160p).webm" type="video/webm">
+						<source src="src/video/video (2160p).mp4" type="video/mp4">
+					</video>
 					<div class="enjoy__info">
 						<h1 class="enjoy__title"><i>Enjoy</i> premium coffee at our charming cafe</h1>
 						<p class="enjoy__p">
@@ -67,6 +74,7 @@
 
 			<section class="favCoffee margin-section" id="favorites">
 				<h2 class="favCoffee__title">Choose your <i>favorite</i> coffee</h2>
+				
 				<div class="favCoffee__carousel">
 					<div class="favCoffee__btn" id="arrowLeft">
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,31 +83,34 @@
 						</svg>
 					</div>
 					<div class="carousel__container">
-						<div class="carousel__item active">
-							<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
-							<h3 class="carousel__item__title">S’mores Frappuccino</h3>
-							<p class="carousel__item__text">
-								This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
-							</p>
-							<h3 class="carousel__item__price">$5.50</h3>
-						</div>
-						<div class="carousel__item">
-							<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
-							<h3 class="carousel__item__title">S’mores Frappuccino</h3>
-							<p class="carousel__item__text">
-								This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
-							</p>
-							<h3 class="carousel__item__price">$5.50</h3>
-						</div>
-						<div class="carousel__item">
-							<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
-							<h3 class="carousel__item__title">S’mores Frappuccino</h3>
-							<p class="carousel__item__text">
-								This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
-							</p>
-							<h3 class="carousel__item__price">$5.50</h3>
+						<div class="carousel__container-items">
+							<div class="carousel__item">
+								<img class="carousel__item__img" src="src/img/favorites/coffee1.png" alt="">
+								<h3 class="carousel__item__title">S’mores Frappuccino</h3>
+								<p class="carousel__item__text">
+									This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+								</p>
+								<h3 class="carousel__item__price">$5.50</h3>
+							</div>
+							<div class="carousel__item">
+								<img class="carousel__item__img" src="src/img/favorites/coffee2.png" alt="">
+								<h3 class="carousel__item__title">Caramel Macchiato</h3>
+								<p class="carousel__item__text">
+									Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+								</p>
+								<h3 class="carousel__item__price">$5.00</h3>
+							</div>
+							<div class="carousel__item">
+								<img class="carousel__item__img" src="src/img/favorites/coffee3.png" alt="">
+								<h3 class="carousel__item__title">Ice coffee</h3>
+								<p class="carousel__item__text">
+									A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+								</p>
+								<h3 class="carousel__item__price">$4.50</h3>
+							</div>
 						</div>
 					</div>
+
 					<div class="favCoffee__btn" id="arrowRight">
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55" />
@@ -108,7 +119,7 @@
 					</div>
 				</div>
 				<div class="favCoffee__pagination">
-					<span class="favCoffee__pagination-rectangle" id="rectangle1"></span>
+					<span class="favCoffee__pagination-rectangle activePag" id="rectangle1"></span>
 					<span class="favCoffee__pagination-rectangle" id="rectangle2"></span>
 					<span class="favCoffee__pagination-rectangle" id="rectangle3"></span>
 				</div>

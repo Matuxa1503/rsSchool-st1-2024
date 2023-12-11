@@ -89,6 +89,25 @@
 	.menu__item:hover .item__img {
 		transform: scale(1.0);
 	}
+
+	.modal__menu {
+		& .size__additives__btn:hover {
+			background: $border-darkColor;
+		} 
+
+		& .size__additives__btn:hover .size__additives__container-letter {
+			background-color: $text-lightColor;
+		} 
+
+		& .size__additives__btn:hover .size__additives__num {
+			color: $text-lightColor;
+		}
+
+		& .menu__close-btn:hover {
+			background-color: $border-darkColor;
+			color: $text-lightColor;
+		}
+	}
 }
 // end hover: hover
 
@@ -210,22 +229,35 @@
 	.social__title {
 		width: 100%;
 	}
+
+	// menu
+	.modal__menu {
+		width: 688px;
+	}
 }
 // end 1006px
 
 @media screen and (max-width: 768px) {
 	// header
 	.header {
-		&__btn-container {
-			display: none;
+		&__wrapper {
+			justify-content: space-between;
+		}
+
+		&__logo {
+			position: relative;
+			z-index: 49;
 		}
 
 		&__burger__container {
 			display: block;
+			position: relative;
+			z-index: 1000;
 			width: 44px;
 			height: 44px;
 			border: 1px solid $border-darkColor;
 			border-radius: 100px;
+			cursor: pointer;
 		}
 
 		&__burger-icon {
@@ -247,26 +279,83 @@
 				border-radius: 1px;
 				width: 100%;
 				background-color: $text-darkColor;
-				transition: all 0.2s ease 0.1s;
+				transition: all 0.2s ease;
 			}
+
+			&.activeIcon::before {
+				top: 50%;
+				transform: rotate(-45deg) translate(0px, -50%);
+				}
 
 			&::after {
 				content: "";
 				position: absolute;
-				left: 0;
 				bottom: -6%;
+				left: 0;
 				height: 1.5px;
 				border-radius: 2px;
 				width: 100%;
 				background-color: $text-darkColor;
-				transition: all 0.2s ease 0.1s;
+				transition: all 0.2s ease;
 			}
+
+			&.activeIcon::after {
+				bottom: 40%;
+				transform: rotate(45deg) translate(0px, 50%);
+				}
 		}
 	}
 
-	.nav {
-		display: none;
+	// burger menu
+	.nav__content {
+		position: fixed;
+		display: block;
+		text-align: center;
+		z-index: 40;
+		padding-top: 160px;
+		width: 100%;
+		height: 100vh;
+		overflow: auto;
+		top: 0px;
+		left: 100%;
+		background-color: $text-lightColor;
+		transition: 0.5s;
 	}
+
+	.nav {
+		&__list {
+			display: inline-block;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		&__item {
+			font-size: 32px;
+			margin: 0 0 51px;
+		}
+	}
+
+	.header__btn-container {
+		font-size: 32px;
+		z-index: 1001;
+		display: inline-block;
+		margin: 38px;
+	}
+
+	.btn__coffee {
+		width: 40px;
+		height: 40px;
+		top: 8px;
+	}
+
+	.activeMenu {
+		left: 0;
+	}
+
+	.header__btn-menu::after {
+		margin-top: 0;
+	}
+	// end burger
 
 	// enjoy
 	.enjoy {
@@ -311,6 +400,11 @@
 		transform: scale(1.05);
 	}
 
+	// menu
+	.menu__grid-container {
+		height: auto;
+	}
+
 	.menu__grid {
 		grid-template-rows: 1fr 1fr;
 		height: 1052px;
@@ -320,11 +414,15 @@
 	.menu__btn {
 		display: inline-block;
 	}
+
+	.noneLoadBtn {
+		display: none;
+	}
 }
 // end 768px
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 715px) {
 	// enjoy
 	.enjoy {
 		&__title {
@@ -363,12 +461,20 @@
 		}
 	}
 
+	// menu
 	.menu__grid {
 		grid-template-columns: 1fr;
 		height: 2144px;
 	}
+
+	.modal__menu {
+		width: 500px;
+		& .menu__img {
+			display: none;
+		}
+	}
 }
-// end 700px
+// end 715px
 
 
 @media screen and (max-width: 550px) {
@@ -389,8 +495,13 @@
 		font-size: 32px;
 	}
 
-	.carousel__item__img {
-		width: 348px;
+	.carousel {
+		&__container {
+			width: 348px;
+		}
+		&__item__img {
+			width: 348px;
+		}
 	}
 
 	// about
@@ -428,15 +539,18 @@
 
 	// menu 
 	.info {
-	&__title {
-		font-size: 32px;
+		&__title {
+			font-size: 32px;
+		}
+
+		&__type-btn {
+			margin-right: 7px;
+		}
 	}
 
-	&__type-btn {
-		margin-right: 7px;
+	.modal__menu {
+		width: 340px;
 	}
-	}
-
 }
 // end 550px
 
@@ -485,8 +599,14 @@
 	}
 
 	// favCoffee
-	.carousel__item__img {
-		max-width: 200px;
+	.carousel {
+		&__container {
+			width: 200px;
+		}
+
+		&__item__img {
+			max-width: 200px;
+		}
 	}
 
 	// about
@@ -526,5 +646,13 @@
 	.item__price {
 		position: static;
 	}
+	
+	.modal__menu {
+		width: 310px;
+	}
 }
 // end 365px
+
+.heightAuto {
+	height: auto;
+}
