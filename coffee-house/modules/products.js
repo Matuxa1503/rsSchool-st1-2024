@@ -6,7 +6,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-1.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-1.jpg",
+			"front": "../src/img/menu/coffee/coffee-1.jpg",
 		},
     "sizes": {
       "s": {
@@ -45,7 +45,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-2.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-2.jpg",
+			"front": "../src/img/menu/coffee/coffee-2.jpg",
 		},
     "sizes": {
       "s": {
@@ -84,7 +84,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-3.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-3.jpg",
+			"front": "../src/img/menu/coffee/coffee-3.jpg",
 		},
     "sizes": {
       "s": {
@@ -123,7 +123,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-4.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-4.jpg",
+			"front": "../src/img/menu/coffee/coffee-4.jpg",
 		},
     "sizes": {
       "s": {
@@ -162,7 +162,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-5.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-5.jpg",
+			"front": "../src/img/menu/coffee/coffee-5.jpg",
 		},
     "sizes": {
       "s": {
@@ -201,7 +201,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-6.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-6.jpg",
+			"front": "../src/img/menu/coffee/coffee-6.jpg",
 		},
     "sizes": {
       "s": {
@@ -240,7 +240,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-7.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-7.jpg",
+			"front": "../src/img/menu/coffee/coffee-7.jpg",
 		},
     "sizes": {
       "s": {
@@ -279,7 +279,7 @@ const products = [
     "category": "coffee",
 		"images": {
 			"backgr": "url('../src/img/menu/coffee/coffee-8.jpg') center/cover no-repeat",
-			"front": "./src/img/menu/coffee/coffee-8.jpg",
+			"front": "../src/img/menu/coffee/coffee-8.jpg",
 		},
     "sizes": {
       "s": {
@@ -318,7 +318,7 @@ const products = [
     "category": "tea",
 		"images": {
 			"backgr": "url('../src/img/menu/tea/tea-1.png') center/cover no-repeat",
-			"front": "./src/img/menu/tea/tea-1.png",
+			"front": "../src/img/menu/tea/tea-1.png",
 		},
     "sizes": {
       "s": {
@@ -357,7 +357,7 @@ const products = [
     "category": "tea",
 		"images": {
 			"backgr": "url('../src/img/menu/tea/tea-2.png') center/cover no-repeat",
-			"front": "./src/img/menu/tea/tea-2.png",
+			"front": "../src/img/menu/tea/tea-2.png",
 		},
     "sizes": {
       "s": {
@@ -396,7 +396,7 @@ const products = [
     "category": "tea",
 		"images": {
 			"backgr": "url('../src/img/menu/tea/tea-3.png') center/cover no-repeat",
-			"front": "./src/img/menu/tea/tea-3.png",
+			"front": "../src/img/menu/tea/tea-3.png",
 		},
     "sizes": {
       "s": {
@@ -435,7 +435,7 @@ const products = [
     "category": "tea",
 		"images": {
 			"backgr": "url('../src/img/menu/tea/tea-4.png') center/cover no-repeat",
-			"front": "./src/img/menu/tea/tea-4.png",
+			"front": "../src/img/menu/tea/tea-4.png",
 		},
     "sizes": {
       "s": {
@@ -474,7 +474,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-1.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-1.png",
+			"front": "../src/img/menu/desserts/dessert-1.png",
 		},
     "sizes": {
       "s": {
@@ -513,7 +513,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-2.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-2.png",
+			"front": "../src/img/menu/desserts/dessert-2.png",
 		},
     "sizes": {
       "s": {
@@ -552,7 +552,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-3.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-3.png",
+			"front": "../src/img/menu/desserts/dessert-3.png",
 		},
     "sizes": {
       "s": {
@@ -591,7 +591,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-4.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-4.png",
+			"front": "../src/img/menu/desserts/dessert-4.png",
 		},
     "sizes": {
       "s": {
@@ -630,7 +630,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-5.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-5.png",
+			"front": "../src/img/menu/desserts/dessert-5.png",
 		},
     "sizes": {
       "s": {
@@ -669,7 +669,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-6.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-6.png",
+			"front": "../src/img/menu/desserts/dessert-6.png",
 		},
     "sizes": {
       "s": {
@@ -708,7 +708,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-7.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-7.png",
+			"front": "../src/img/menu/desserts/dessert-7.png",
 		},
     "sizes": {
       "s": {
@@ -747,7 +747,7 @@ const products = [
     "category": "dessert",
 		"images": {
 			"backgr": "url('../src/img/menu/desserts/dessert-8.png') center/cover no-repeat",
-			"front": "./src/img/menu/desserts/dessert-8.png",
+			"front": "../src/img/menu/desserts/dessert-8.png",
 		},
     "sizes": {
       "s": {
