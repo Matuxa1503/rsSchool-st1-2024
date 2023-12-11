@@ -551,8 +551,8 @@ const products = [
     "price": "4.50",
     "category": "dessert",
 		"images": {
-			"backgr": "url('../src/img/menu/desserts/dessert-3.png') center/cover no-repeat",
-			"front": "../src/img/menu/desserts/dessert-3.png",
+			"backgr": "url('./src/img/menu/desserts/dessert-3.png') center/cover no-repeat",
+			"front": "./src/",
 		},
     "sizes": {
       "s": {
