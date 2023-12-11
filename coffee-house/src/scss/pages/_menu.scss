@@ -30,12 +30,7 @@
 	}
 
 	&__type-btn {
-		display: flex;
-		align-items: center;
-		background: none;
-		border: 1px solid $border-lightColor;
-		padding: 8px 16px 8px 8px;
-		border-radius: 100px;
+		@extend %menu-btn-style;
 		margin-right: 16px;
 		transition: all 0.7s ease;
 		&:last-child {
@@ -43,20 +38,12 @@
 		}
 
 		.info__wrapper-svg {
-			position: relative;
-			width: 30px;
-			height: 30px;
-			margin-right: 8px;
-			background: $border-lightColor;
-			border-radius: 100px;
+			@extend %menu-contain-btn-style;
 			transition: all 0.7s ease;
 		}
 
 		& svg {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			@extend %menu-icon-btn-style;
 		}
 
 		& span {
@@ -65,16 +52,9 @@
 	}
 }
 
-button:disabled {
-	cursor: default;
-	background: $border-darkColor;
-	color: $text-lightColor;
-
-	& .info__wrapper-svg {
-		background-color: $text-lightColor;
-	}
+.menu__grid-container {
+	display: none;
 }
-
 
 .menu__grid {
 	display: grid;
@@ -95,32 +75,6 @@ button:disabled {
 	height: 310px;
 	border-radius: 40px;
 	overflow: hidden;
-}
-
-
-.linkImg1 {
-	background: url('../src/img/menu/coffee/coffee-1.jpg') center/cover no-repeat;
-}
-.linkImg2{
-	background: url('../src/img/menu/coffee/coffee-2.jpg') center/cover no-repeat;
-}
-.linkImg3{
-	background: url('../src/img/menu/coffee/coffee-3.jpg') center/cover no-repeat;
-}
-.linkImg4{
-	background: url('../src/img/menu/coffee/coffee-4.jpg') center/cover no-repeat;
-}
-.linkImg5{
-	background: url('../src/img/menu/coffee/coffee-5.jpg') center/cover no-repeat;
-}
-.linkImg6{
-	background: url('../src/img/menu/coffee/coffee-6.jpg') center/cover no-repeat;
-}
-.linkImg7{
-	background: url('../src/img/menu/coffee/coffee-7.jpg') center/cover no-repeat;
-}
-.linkImg8{
-	background: url('../src/img/menu/coffee/coffee-8.jpg') center/cover no-repeat;
 }
 
 .item__img {
@@ -165,4 +119,153 @@ button:disabled {
 	border-radius: 100px;
 	padding: 18px;
 	margin: 40px auto 0;
+}
+
+.activeMenu {
+	display: block;
+}
+
+
+.modal__menu {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	width: 800px;
+	padding: 16px;
+	border-radius: 40px;
+	background-color: $text-lightColor;
+
+	& .menu__wrapper {
+		display: flex;
+		gap: 20px;
+	}
+
+	& .menu__img {
+		border-radius: 40px;
+		width: 310px;
+		height: 310px;
+	}
+
+	& .menu__title {
+		@extend %heading-3;
+		color: $text-darkColor;
+		margin-bottom: 12px;
+	}
+
+	& .menu__text {
+		@extend %body-textMedium;
+		color: $text-darkColor;
+		margin-bottom: 6px;
+	}
+
+	& .menu__btns {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	& .size__additives__btn {
+		@extend %menu-btn-style;
+		transition: all 0.7s ease;
+	}
+
+	& .size__additives__container-letter {
+		@extend %menu-contain-btn-style;
+		transition: all 0.7s ease;
+	}
+
+	& .size__additives__letter {
+		@extend %menu-icon-btn-style;
+		@extend %link-button-style;
+		color: $text-darkColor;
+	}
+
+	& .size__additives__num {
+		@extend %link-button-style;
+		color: $text-darkColor;
+		transition: all 0.7s ease;
+	}
+
+	& .menu__price {
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 0;
+	}
+
+	& .price__text {
+		@extend %heading-3;
+		color: $text-darkColor;
+	}
+
+	& .menu__additional-info {
+		display: flex;
+		gap: 8px;
+		padding-top: 12px;
+		margin-bottom: 30px;
+		border-top: 1px solid $border-lightColor;
+	}
+
+	& .additional-info__img {
+		width: 16px;
+		height: 16px;
+	}
+
+	& .additional-info__text {
+		@extend %body-textCaption;
+		color: $text-darkColor;
+	}
+
+	& .menu__close-btn {
+		@extend %link-button-style;
+		display: block;
+		width: 100%;
+		border: 1px solid $border-darkColor;
+		border-radius: 100px;
+		padding: 10px 78px;
+		background: none;
+		transition: 0.7s ease;
+	}
+}
+
+button:disabled {
+	cursor: default;
+	background: $border-darkColor;
+	color: $text-lightColor;
+
+	& .info__wrapper-svg {
+		background-color: $text-lightColor;
+	}
+
+	.modal__menu & {
+		background: $border-darkColor;
+
+		& .size__additives__container-letter {
+			background-color: $text-lightColor;
+		}
+
+		& .size__additives__num {
+			color: $text-lightColor;
+		}
+	}
+}
+
+.displayBlock {
+	display: block;
+}
+
+.activeModalBtn {
+	.modal__menu & {
+		background: $border-darkColor;
+
+		& .size__additives__container-letter {
+			background-color: $text-lightColor;
+		}
+
+		& .size__additives__num {
+			color: $text-lightColor;
+		}
+	}
 }

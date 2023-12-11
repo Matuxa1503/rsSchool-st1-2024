@@ -52,8 +52,25 @@
 	}
 }
 
-#rectangle1 {
+.activePag::after {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 4px;
+	border-radius: 100px;
 	background-color: $border-darkColor;
+	animation-name: color;
+	animation-duration: 6s;
+}
+
+@keyframes color {
+	from {
+		width: 0px;
+	}
+
+	to {
+		width: 40px;
+	}
 }
 
 	#arrowRight {
@@ -63,24 +80,38 @@
 .carousel {
 	&__container {
 		position: relative;
-		width: 100%;
+		width: 480px;
+		margin: 0 auto;
 		overflow: hidden;
+	}
+	
+	&__container-items {
+		position: relative;
+		left: 0;
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		transition: all 1s ease;
 	}
 
 	&__item {
-		display: none;
+		display: block;
+		width: 480px;
 		position: relative;
-		margin: 0 auto;
+		margin-right: 100px;
 
-		&.active,
-		&.next {
-			display: block;
-		}
+		// &.active {
+		// 	display: block;
+		// }
 
-		&.next {
-			position: absolute;
-			top: 0;
-			width: 100%;
+		// &.next {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	width: 100%;
+		// }
+
+		&__img {
+			width: 480px;
 		}
 
 		&__title {
