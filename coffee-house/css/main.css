@@ -10,28 +10,53 @@
   line-height: 125%;
 }
 
-.item__price, .item__title, .contacts__title, .carousel__item__price, .carousel__item__title {
+.modal__menu .price__text, .modal__menu .menu__title, .item__price, .item__title, .contacts__title, .carousel__item__price, .carousel__item__title {
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
 }
 
-.item__text, .mobileApp__text, .carousel__item__text, .enjoy__p {
+.modal__menu .menu__text, .item__text, .mobileApp__text, .carousel__item__text, .enjoy__p {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
 
-.link__text span {
+.modal__menu .additional-info__text, .link__text span {
   font-size: 10px;
   font-weight: 600;
   line-height: 140%;
 }
 
-.info__type-btn span, .link__text, .enjoy__link, .header__btn-container, .nav__item {
+.modal__menu .menu__close-btn, .modal__menu .size__additives__num, .modal__menu .size__additives__letter, .info__type-btn span, .link__text, .enjoy__link, .header__btn-container, .nav__item {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+}
+
+.modal__menu .size__additives__btn, .info__type-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid #C1B6AD;
+  padding: 8px 16px 8px 8px;
+  border-radius: 100px;
+}
+
+.modal__menu .size__additives__container-letter, .info__type-btn .info__wrapper-svg {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: #C1B6AD;
+  border-radius: 100px;
+}
+
+.modal__menu .size__additives__letter, .info__type-btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 html {
@@ -96,6 +121,22 @@ p {
 
 .bodyHidden {
   overflow: hidden;
+}
+
+.modalPadding {
+  margin: 20px 0 0;
+}
+
+.backgroundFill {
+  display: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1000%;
+  opacity: 0.8;
+  transition: 0.5s;
+  z-index: 50;
+  background-color: rgba(64, 63, 61, 0.8);
 }
 
 .header {
@@ -548,12 +589,6 @@ p {
   justify-content: center;
 }
 .info__type-btn {
-  display: flex;
-  align-items: center;
-  background: none;
-  border: 1px solid #C1B6AD;
-  padding: 8px 16px 8px 8px;
-  border-radius: 100px;
   margin-right: 16px;
   transition: all 0.7s ease;
 }
@@ -561,27 +596,10 @@ p {
   margin-right: 0;
 }
 .info__type-btn .info__wrapper-svg {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
-  background: #C1B6AD;
-  border-radius: 100px;
   transition: all 0.7s ease;
 }
-.info__type-btn svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-button:disabled {
-  cursor: default;
-  background: #665F55;
-  color: #E1D4C9;
-}
-button:disabled .info__wrapper-svg {
-  background-color: #E1D4C9;
+.menu__grid-container {
+  display: none;
 }
 
 .menu__grid {
@@ -603,38 +621,6 @@ button:disabled .info__wrapper-svg {
   height: 310px;
   border-radius: 40px;
   overflow: hidden;
-}
-
-.linkImg1 {
-  background: url("../src/img/menu/coffee/coffee-1.jpg") center/cover no-repeat;
-}
-
-.linkImg2 {
-  background: url("../src/img/menu/coffee/coffee-2.jpg") center/cover no-repeat;
-}
-
-.linkImg3 {
-  background: url("../src/img/menu/coffee/coffee-3.jpg") center/cover no-repeat;
-}
-
-.linkImg4 {
-  background: url("../src/img/menu/coffee/coffee-4.jpg") center/cover no-repeat;
-}
-
-.linkImg5 {
-  background: url("../src/img/menu/coffee/coffee-5.jpg") center/cover no-repeat;
-}
-
-.linkImg6 {
-  background: url("../src/img/menu/coffee/coffee-6.jpg") center/cover no-repeat;
-}
-
-.linkImg7 {
-  background: url("../src/img/menu/coffee/coffee-7.jpg") center/cover no-repeat;
-}
-
-.linkImg8 {
-  background: url("../src/img/menu/coffee/coffee-8.jpg") center/cover no-repeat;
 }
 
 .item__img {
@@ -676,6 +662,121 @@ button:disabled .info__wrapper-svg {
   border-radius: 100px;
   padding: 18px;
   margin: 40px auto 0;
+}
+
+.activeMenu {
+  display: block;
+}
+
+.modal__menu {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 800px;
+  padding: 16px;
+  border-radius: 40px;
+  background-color: #E1D4C9;
+}
+.modal__menu .menu__wrapper {
+  display: flex;
+  gap: 20px;
+}
+.modal__menu .menu__img {
+  border-radius: 40px;
+  width: 310px;
+  height: 310px;
+}
+.modal__menu .menu__title {
+  color: #403F3D;
+  margin-bottom: 12px;
+}
+.modal__menu .menu__text {
+  color: #403F3D;
+  margin-bottom: 6px;
+}
+.modal__menu .menu__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.modal__menu .size__additives__btn {
+  transition: all 0.7s ease;
+}
+.modal__menu .size__additives__container-letter {
+  transition: all 0.7s ease;
+}
+.modal__menu .size__additives__letter {
+  color: #403F3D;
+}
+.modal__menu .size__additives__num {
+  color: #403F3D;
+  transition: all 0.7s ease;
+}
+.modal__menu .menu__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.modal__menu .price__text {
+  color: #403F3D;
+}
+.modal__menu .menu__additional-info {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  margin-bottom: 30px;
+  border-top: 1px solid #C1B6AD;
+}
+.modal__menu .additional-info__img {
+  width: 16px;
+  height: 16px;
+}
+.modal__menu .additional-info__text {
+  color: #403F3D;
+}
+.modal__menu .menu__close-btn {
+  display: block;
+  width: 100%;
+  border: 1px solid #665F55;
+  border-radius: 100px;
+  padding: 10px 78px;
+  background: none;
+  transition: 0.7s ease;
+}
+
+button:disabled {
+  cursor: default;
+  background: #665F55;
+  color: #E1D4C9;
+}
+button:disabled .info__wrapper-svg {
+  background-color: #E1D4C9;
+}
+.modal__menu button:disabled {
+  background: #665F55;
+}
+.modal__menu button:disabled .size__additives__container-letter {
+  background-color: #E1D4C9;
+}
+.modal__menu button:disabled .size__additives__num {
+  color: #E1D4C9;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.modal__menu .activeModalBtn {
+  background: #665F55;
+}
+.modal__menu .activeModalBtn .size__additives__container-letter {
+  background-color: #E1D4C9;
+}
+.modal__menu .activeModalBtn .size__additives__num {
+  color: #E1D4C9;
 }
 
 @media (hover: hover) {
@@ -732,6 +833,19 @@ button:disabled .info__wrapper-svg {
   }
   .menu__item:hover .item__img {
     transform: scale(1);
+  }
+  .modal__menu .size__additives__btn:hover {
+    background: #665F55;
+  }
+  .modal__menu .size__additives__btn:hover .size__additives__container-letter {
+    background-color: #E1D4C9;
+  }
+  .modal__menu .size__additives__btn:hover .size__additives__num {
+    color: #E1D4C9;
+  }
+  .modal__menu .menu__close-btn:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
   }
 }
 @media (hover: none) {
@@ -816,6 +930,9 @@ button:disabled .info__wrapper-svg {
   .social__title {
     width: 100%;
   }
+  .modal__menu {
+    width: 688px;
+  }
 }
 @media screen and (max-width: 768px) {
   .header__wrapper {
@@ -823,7 +940,7 @@ button:disabled .info__wrapper-svg {
   }
   .header__logo {
     position: relative;
-    z-index: 1000;
+    z-index: 49;
   }
   .header__burger__container {
     display: block;
@@ -879,7 +996,7 @@ button:disabled .info__wrapper-svg {
     position: fixed;
     display: block;
     text-align: center;
-    z-index: 100;
+    z-index: 40;
     padding-top: 160px;
     width: 100%;
     height: 100vh;
@@ -945,6 +1062,9 @@ button:disabled .info__wrapper-svg {
     max-width: 688px;
     transform: scale(1.05);
   }
+  .menu__grid-container {
+    height: auto;
+  }
   .menu__grid {
     grid-template-rows: 1fr 1fr;
     height: 1052px;
@@ -953,8 +1073,11 @@ button:disabled .info__wrapper-svg {
   .menu__btn {
     display: inline-block;
   }
+  .noneLoadBtn {
+    display: none;
+  }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 715px) {
   .enjoy__title {
     font-size: 52px;
   }
@@ -979,6 +1102,12 @@ button:disabled .info__wrapper-svg {
   .menu__grid {
     grid-template-columns: 1fr;
     height: 2144px;
+  }
+  .modal__menu {
+    width: 500px;
+  }
+  .modal__menu .menu__img {
+    display: none;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1026,6 +1155,9 @@ button:disabled .info__wrapper-svg {
   }
   .info__type-btn {
     margin-right: 7px;
+  }
+  .modal__menu {
+    width: 340px;
   }
 }
 @media screen and (max-width: 456px) {
@@ -1090,4 +1222,10 @@ button:disabled .info__wrapper-svg {
   .item__price {
     position: static;
   }
+  .modal__menu {
+    width: 310px;
+  }
+}
+.heightAuto {
+  height: auto;
 }

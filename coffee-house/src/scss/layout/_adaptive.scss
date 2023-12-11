@@ -89,6 +89,25 @@
 	.menu__item:hover .item__img {
 		transform: scale(1.0);
 	}
+
+	.modal__menu {
+		& .size__additives__btn:hover {
+			background: $border-darkColor;
+		} 
+
+		& .size__additives__btn:hover .size__additives__container-letter {
+			background-color: $text-lightColor;
+		} 
+
+		& .size__additives__btn:hover .size__additives__num {
+			color: $text-lightColor;
+		}
+
+		& .menu__close-btn:hover {
+			background-color: $border-darkColor;
+			color: $text-lightColor;
+		}
+	}
 }
 // end hover: hover
 
@@ -210,6 +229,11 @@
 	.social__title {
 		width: 100%;
 	}
+
+	// menu
+	.modal__menu {
+		width: 688px;
+	}
 }
 // end 1006px
 
@@ -222,7 +246,7 @@
 
 		&__logo {
 			position: relative;
-			z-index: 1000;
+			z-index: 49;
 		}
 
 		&__burger__container {
@@ -287,7 +311,7 @@
 		position: fixed;
 		display: block;
 		text-align: center;
-		z-index: 100;
+		z-index: 40;
 		padding-top: 160px;
 		width: 100%;
 		height: 100vh;
@@ -376,6 +400,11 @@
 		transform: scale(1.05);
 	}
 
+	// menu
+	.menu__grid-container {
+		height: auto;
+	}
+
 	.menu__grid {
 		grid-template-rows: 1fr 1fr;
 		height: 1052px;
@@ -385,11 +414,15 @@
 	.menu__btn {
 		display: inline-block;
 	}
+
+	.noneLoadBtn {
+		display: none;
+	}
 }
 // end 768px
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 715px) {
 	// enjoy
 	.enjoy {
 		&__title {
@@ -428,12 +461,20 @@
 		}
 	}
 
+	// menu
 	.menu__grid {
 		grid-template-columns: 1fr;
 		height: 2144px;
 	}
+
+	.modal__menu {
+		width: 500px;
+		& .menu__img {
+			display: none;
+		}
+	}
 }
-// end 700px
+// end 715px
 
 
 @media screen and (max-width: 550px) {
@@ -498,15 +539,18 @@
 
 	// menu 
 	.info {
-	&__title {
-		font-size: 32px;
+		&__title {
+			font-size: 32px;
+		}
+
+		&__type-btn {
+			margin-right: 7px;
+		}
 	}
 
-	&__type-btn {
-		margin-right: 7px;
+	.modal__menu {
+		width: 340px;
 	}
-	}
-
 }
 // end 550px
 
@@ -555,7 +599,6 @@
 	}
 
 	// favCoffee
-
 	.carousel {
 		&__container {
 			width: 200px;
@@ -603,5 +646,13 @@
 	.item__price {
 		position: static;
 	}
+	
+	.modal__menu {
+		width: 310px;
+	}
 }
 // end 365px
+
+.heightAuto {
+	height: auto;
+}
