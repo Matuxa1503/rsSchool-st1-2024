@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js",
-		"lint:fix": "eslint index.js --fix"
+    "lint": "eslint ./src/index.js",
+		"lint:fix": "eslint ./src --fix"
   },
   "repository": {
     "type": "git",
