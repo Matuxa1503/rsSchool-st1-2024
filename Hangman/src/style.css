@@ -112,6 +112,11 @@ p{width: auto}
 	opacity: 0.6;
 }
 
+button:disabled {
+	opacity: 0.6;
+	cursor: default;
+}
+
 @media (max-width: 1100px) {
 	.wrapper {
 		flex-direction: column;
