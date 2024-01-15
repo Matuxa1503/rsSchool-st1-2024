@@ -86,7 +86,7 @@ const gameOver = (isVictory) => {
 			});
 		} else {
 			count++;
-			imgMan.src = `./img/hangman-${count}.svg`;
+			imgMan.src = `src/img/hangman-${count}.svg`;
 		}
 		btn.disabled = true;
 		incorrectCounter.innerText = `${count} / ${maxCount}`;
