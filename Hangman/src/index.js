@@ -33,8 +33,8 @@ function buildGame() {
 	const modal = document.createElement('div');
 	modal.classList.add('modal');
 	modal.insertAdjacentHTML('beforeend', '<h3 class="modal__title">');
-	modal.insertAdjacentHTML('beforeend', '<div class="modal__text">Correct word: <b></b></div>');
-	modal.insertAdjacentHTML('beforeend', '<button class="modal__btn"></button>');
+	modal.insertAdjacentHTML('beforeend', '<div class="modal__text"></div>');
+	modal.insertAdjacentHTML('beforeend', '<button class="modal__btn">Play Again</button>');
 	modalWrapper.append(modal);
 }
 // end buildGame()
@@ -44,15 +44,42 @@ buildGame();
 	const keyboard = document.querySelector('.quiz__keyboard');
 	const imgMan = document.querySelector('.gallows__img');
 	let curWord;
-	let count = 0;
+	let count;
+	let correctLetters;
 	const maxCount = 6;
 	const wordShow = document.querySelector('.quiz__word');
 	const incorrectCounter = document.querySelectorAll('.quiz__guesses b')[1];
+	const modal = document.querySelector('.modal__wrappper');
+	const modalContent = document.querySelector('.modal');
+	const playAgainBtn = document.querySelector('.modal__btn');
+
+	// reset game
+	const resetGame = () => {
+		correctLetters = [];
+		count = 0;
+		modal.classList.remove('active');
+		modalContent.classList.remove('active');
+		wordShow.innerHTML = curWord.split('').map(() => '<li class="quiz__letter"></li>').join('');
+		imgMan.src = `./img/hangman-${count}.svg`;
+		incorrectCounter.innerText = `${count} / ${maxCount}`;
+		keyboard.querySelectorAll('button').forEach((btn) => btn.disabled = false);
+	};
+
+const gameOver = (isVictory) => {
+	setTimeout(() => {
+		const modalText = isVictory ? 'You found the word:' : 'The correct word was:';
+		modal.classList.add('active');
+		modalContent.classList.add('active');
+		modal.querySelector('.modal__title').innerText = `${isVictory ? 'You win' : 'Game Over'}`;
+		modal.querySelector('.modal__text').innerHTML = `${modalText}  <b>${curWord}</b>`;
+	}, 300);
+};
 
 	const startGame = (btn, letter) => {
 		if (curWord.includes(letter)) {
 			[...curWord].forEach((curletter, i) => {
 				if (curletter === letter) {
+					correctLetters.push(curletter);
 					wordShow.querySelectorAll('li')[i].innerText = curletter;
 					wordShow.querySelectorAll('li')[i].classList.add('guessed');
 				}
@@ -63,6 +90,9 @@ buildGame();
 		}
 		btn.disabled = true;
 		incorrectCounter.innerText = `${count} / ${maxCount}`;
+
+		if (count === maxCount) return gameOver(false);
+		if (correctLetters.length === curWord.length) return gameOver(true);
 	};
 
 	// create keyboard
@@ -78,9 +108,11 @@ buildGame();
 	const { word, hint } = Words[Math.floor(Math.random() * Words.length)];
 	console.log(word);
 	curWord = word;
-	document.querySelector('.quiz__guesses b').innerText += hint;
-	wordShow.innerHTML = word.split('').map(() => '<li class="quiz__letter"></li>').join('');
+	document.querySelector('.quiz__guesses b').innerText = hint;
+	resetGame();
 };
 
 	getRandomWord();
+
+	playAgainBtn.addEventListener('click', getRandomWord);
 });

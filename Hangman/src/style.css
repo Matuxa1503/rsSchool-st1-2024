@@ -78,11 +78,10 @@ p{width: auto}
 }
 
 .quiz__guesses:nth-child(2) {
-	height: 150px;
 }
 
 .quiz__guesses:nth-child(3) {
-	margin-bottom: 100px;
+	margin: 20px 0 100px;
 }
 
 .quiz__keyboard {
@@ -119,17 +118,21 @@ button:disabled {
 
 .modal__wrappper {
 	position: fixed;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
+	z-index: 100;
 	left: 0;
 	top: 0;
-	/* background: rgba(0, 0, 0, 0.6); */
-	background: none;
+	background: rgba(0, 0, 0, 0.6);
 	width: 100%;
 	height: 100%;
 	padding: 20px;
 	text-align: center;
+}
+
+.modal__wrappper.active {
+	display: flex;
 }
 
 .modal {
@@ -138,6 +141,10 @@ button:disabled {
 	background-color: #fff;
 	width: 500px;
 	height: 400px;
+}
+
+.modal.active {
+	display: block;
 }
 
 .modal__title {
@@ -199,6 +206,6 @@ button:disabled {
 
 	.modal {
 		width: 400px;
-		height: 500px;
+		height: 600px;
 	}
 }
