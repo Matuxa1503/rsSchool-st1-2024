@@ -9,7 +9,7 @@ function buildGame() {
 	wrapper.classList.add('wrapper');
 	document.body.append(wrapper);
 
-	const arrClasses = ['gallows', 'quiz'];
+	const arrClasses = ['gallows', 'quiz', 'modal__wrappper'];
 	arrClasses.forEach((item) => {
 		const div = document.createElement('div');
 		div.classList.add(item);
@@ -27,6 +27,15 @@ function buildGame() {
 	quiz.insertAdjacentHTML('beforeend', '<h3 class="quiz__guesses">Hint: <b></b>');
 	quiz.insertAdjacentHTML('beforeend', '<h3 class="quiz__guesses">Incorrect guesses: <b>0 / 6</b>');
 	quiz.insertAdjacentHTML('beforeend', '<div class="quiz__keyboard">');
+
+	// add modal
+	const modalWrapper = document.querySelector('.modal__wrappper');
+	const modal = document.createElement('div');
+	modal.classList.add('modal');
+	modal.insertAdjacentHTML('beforeend', '<h3 class="modal__title">');
+	modal.insertAdjacentHTML('beforeend', '<div class="modal__text">Correct word: <b></b></div>');
+	modal.insertAdjacentHTML('beforeend', '<button class="modal__btn"></button>');
+	modalWrapper.append(modal);
 }
 // end buildGame()
 buildGame();
