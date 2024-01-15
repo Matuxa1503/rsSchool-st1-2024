@@ -18,7 +18,7 @@ function buildGame() {
 
 	// add elem in gallows block
 	const gallows = document.querySelector('.gallows');
-	gallows.insertAdjacentHTML('beforeend', '<img class="gallows__img" src="./img/hangman-0.svg" alt="">');
+	gallows.insertAdjacentHTML('beforeend', '<img class="gallows__img" src="src/img/hangman-0.svg" alt="">');
 	gallows.insertAdjacentHTML('beforeend', '<h1 class="gallows__title"><span>Hangman</span> Game</h1>');
 
 	// add elem in quiz block
@@ -60,7 +60,7 @@ buildGame();
 		modal.classList.remove('active');
 		modalContent.classList.remove('active');
 		wordShow.innerHTML = curWord.split('').map(() => '<li class="quiz__letter"></li>').join('');
-		imgMan.src = `./img/hangman-${count}.svg`;
+		imgMan.src = `src/img/hangman-${count}.svg`;
 		incorrectCounter.innerText = `${count} / ${maxCount}`;
 		keyboard.querySelectorAll('button').forEach((btn) => btn.disabled = false);
 	};
